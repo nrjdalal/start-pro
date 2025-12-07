@@ -20,7 +20,7 @@ const getSession = createServerFn({ method: "GET" }).handler(async () => {
   })
 })
 
-export const Route = createFileRoute("/(dashboard)")({
+export const Route = createFileRoute("/_layout")({
   loader: async () => {
     const session = await getSession()
 
