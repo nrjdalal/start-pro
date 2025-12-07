@@ -45,7 +45,6 @@ export function NavbarHome() {
         </Link>
         <div className="flex items-center gap-2.5">
           {session?.user ? (
-            // @ts-expect-error - Route "/x" does not exist yet
             <Link to="/x">
               <Button
                 className="w-24 cursor-pointer"
