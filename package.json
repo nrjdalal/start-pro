@@ -2,6 +2,7 @@
   "name": "start-pro",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "vite build",
     "dev": "vite dev --port 3000",
@@ -93,6 +94,7 @@
     "@tanstack/react-devtools": "^0.8.2",
     "@tanstack/react-query-devtools": "^5.91.1",
     "@tanstack/react-router-devtools": "^1.140.0",
+    "@tanstack/react-router-ssr-query": "^1.140.0",
     "@tanstack/react-start": "^1.140.0",
     "@types/node": "^20",
     "@types/react": "^19",
