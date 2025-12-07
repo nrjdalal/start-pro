@@ -1,6 +1,7 @@
 import type { QueryClient } from "@tanstack/react-query"
 import { createRootRouteWithContext, HeadContent, Scripts } from "@tanstack/react-router"
 
+import { NavbarHome } from "@/components/navbar/home"
 import { InnerProvider } from "@/app/providers"
 
 import appCss from "./globals.css?url"
@@ -39,7 +40,10 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        <InnerProvider>{children}</InnerProvider>
+        <InnerProvider>
+          <NavbarHome />
+          {children}
+        </InnerProvider>
         <Scripts />
       </body>
     </html>
