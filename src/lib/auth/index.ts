@@ -2,6 +2,7 @@ import { db } from "@/db"
 import { betterAuth } from "better-auth"
 import { drizzleAdapter } from "better-auth/adapters/drizzle"
 import { magicLink } from "better-auth/plugins"
+import { tanstackStartCookies } from "better-auth/tanstack-start"
 import { Resend } from "resend"
 
 import { account, session, user, verification } from "@/db/schema/auth"
@@ -23,6 +24,7 @@ export const auth = betterAuth({
     },
   },
   plugins: [
+    tanstackStartCookies(),
     magicLink({
       sendMagicLink: async ({ email, url }) => {
         const resend = new Resend(process.env.RESEND_API_KEY as string)
