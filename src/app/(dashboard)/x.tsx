@@ -5,5 +5,5 @@ export const Route = createFileRoute("/(dashboard)/x")({
 })
 
 function Page() {
-  return <div>X Page</div>
+  return null
 }
