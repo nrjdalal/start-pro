@@ -13,6 +13,7 @@ A modern, production-ready React starter template powered by **TanStack Start**,
 
 ```bash
 .
+├── layout.tsx
 ├── page.tsx
 ├── (dashboard)
 │   ├── layout.tsx
