@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/sidebar"
 import SidebarUser from "@/components/sidebar/user"
 
-const getAuthSession = createServerFn({ method: "GET" }).handler(async () => {
+const getSession = createServerFn({ method: "GET" }).handler(async () => {
   const request = getRequest()
   return await auth.api.getSession({
     headers: request.headers,
@@ -22,7 +22,7 @@ const getAuthSession = createServerFn({ method: "GET" }).handler(async () => {
 
 export const Route = createFileRoute("/(dashboard)")({
   loader: async () => {
-    const session = await getAuthSession()
+    const session = await getSession()
 
     if (!session?.user) {
       throw redirect({
