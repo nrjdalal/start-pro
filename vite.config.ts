@@ -16,7 +16,7 @@ const config = defineConfig({
     virtualNextRoutes(),
     tanstackStart({
       router: {
-        routesDirectory: "src/app",
+        routesDirectory: "app",
         virtualRouteConfig: "./routes",
       },
     }),
