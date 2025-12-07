@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from "react"
 
-import { ReactQueryDevtools } from "@tanstack/react-query-devtools"
+import { TanStackDevtools } from "@tanstack/react-devtools"
+import { ReactQueryDevtoolsPanel } from "@tanstack/react-query-devtools"
+import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools"
 import { CodeXml, ExternalLink } from "lucide-react"
 
 const config = {
-  GITHUB: "nrjdalal/the-next-starter",
-  VERCEL: "nrjdalals-projects/the-next-starter",
+  GITHUB: "nrjdalal/start-pro",
+  VERCEL: "nrjdalals-projects/start-pro",
 }
 
 const Links = [
@@ -51,7 +53,21 @@ export default function Component() {
     <div className="bg-background text-primary fixed right-2 bottom-2 z-100 flex items-center gap-1.5 rounded-full border font-mono text-xs font-medium select-none">
       {expandDevtools && (
         <>
-          <ReactQueryDevtools buttonPosition="top-right" />
+          <TanStackDevtools
+            config={{
+              position: "top-right",
+            }}
+            plugins={[
+              {
+                name: "Tanstack Router",
+                render: <TanStackRouterDevtoolsPanel />,
+              },
+              {
+                name: "React Query",
+                render: <ReactQueryDevtoolsPanel />,
+              },
+            ]}
+          />
           <div className="fixed right-4 bottom-12 flex items-center gap-x-3">
             {Links.map(({ title, url }) => (
               <a
@@ -81,7 +97,7 @@ export default function Component() {
       )}
 
       <CodeXml
-        className="size-[1.875rem] cursor-pointer p-1.5"
+        className="size-7.5 cursor-pointer p-1.5"
         onClick={() => setExpandDevtools(!expandDevtools)}
       />
     </div>
