@@ -11,6 +11,19 @@ A modern, production-ready React starter template powered by **TanStack Start**,
 - **Authentication**: [Better Auth](https://better-auth.com).
 - **Tooling**: Biome/ESLint, Prettier, and commit hooks.
 
+```bash
+.
+├── page.tsx
+├── (dashboard)
+│   ├── layout.tsx
+│   └── x
+│       └── page.tsx
+└── api
+    └── auth
+        └── [...all]
+            └── route.ts
+```
+
 ## Getting Started
 
 ### Prerequisites
