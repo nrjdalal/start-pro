@@ -5,14 +5,12 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
     "dev": "vite dev --port 3000",
-    "drizzle": "bun --env-file=.env.development drizzle-kit push",
-    "drizzle:prod": "bun --env-file=.env.production drizzle-kit push",
     "lint": "eslint",
     "prepare": "npx simple-git-hooks",
-    "start": "vite preview",
-    "studio": "bun --env-file=.env.development drizzle-kit studio",
-    "studio:prod": "bun --env-file=.env.production drizzle-kit studio"
+    "start": "vite preview"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged --verbose",

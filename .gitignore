@@ -13,9 +13,9 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# start
+/.output/
+/src/routeTree.gen.ts
 
 # production
 /build
@@ -39,7 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# custom
-.output/
-src/routeTree.gen.ts
