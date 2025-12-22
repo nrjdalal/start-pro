@@ -112,6 +112,6 @@
     "typescript": "^5",
     "virtual-next-routes": "^0.0.29",
     "vite": "^7.2.6",
-    "vite-tsconfig-paths": "^5.1.4"
+    "vite-tsconfig-paths": "^6.0.0"
   }
 }
